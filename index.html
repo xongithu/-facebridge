@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FaceBridge</title>
+
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 25px 20px;
+    background: #101820;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 450px;
+    margin: 45px auto;
+    text-align: center;
+}
+
+.logo {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #aab5c0;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+.card {
+    background: #1c2935;
+    padding: 25px;
+    border-radius: 18px;
+    border: 1px solid #344452;
+}
+
+button {
+    width: 100%;
+    padding: 17px;
+    border: none;
+    border-radius: 12px;
+    background: #1877f2;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:active {
+    opacity: 0.8;
+}
+
+.note {
+    color: #9baab8;
+    font-size: 12px;
+    margin-top: 25px;
+    line-height: 1.6;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">🌐</div>
+
+<h1>FaceBridge</h1>
+
+<p class="subtitle">
+Your simple gateway to Facebook.
+Connect and access your favourite social platform.
+</p>
+
+<div class="card">
+
+<h2>Welcome</h2>
+
+<p>Ready to connect?</p>
+
+<button onclick="openFacebook()">
+Open Facebook
+</button>
+
+<p class="note">
+Facebook opens in your browser.
+Your Facebook password is never collected or stored by FaceBridge.
+</p>
+
+</div>
+
+</div>
+
+<script>
+const tg = window.Telegram.WebApp;
+
+tg.ready();
+tg.expand();
+
+function openFacebook() {
+    window.open("https://www.facebook.com/", "_blank");
+}
+</script>
+
+</body>
+</html>
